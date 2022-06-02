@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        #main{
+            background-color:rgb(156, 189, 158);
+            margin: 80px;
+            padding:80px;
+           border-radius: 30px;
+            
+            
+         }
+        h1{
+            text-align: center;
+            color:brown;
+          
+            
+            
+        }
+        #form{
+           text-align:center;
+        
+        }
+        .inp{
+           display: inline-block;
+           padding-left: 20px;
+           text-align: center;
+        }
+        .abc{
+            text-align: center;
+        }
+        label{
+            font-size: 22;
+            font-weight: bold;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Temperature Converter</h1>
+        <div id="form">
+          <div class="inp"> 
+          <label >Celsius</label>
+           <br>
+           <input type="number" value="0" id="cel" class="abc">
+           </div> 
+        <div class="inp"> 
+          <label >Fahrenheit</label>
+          <br>
+          <input type="number" value="0" id="far" class="abc">
+      </div>
+      </div>
+    </div>
+    <script>
+     let celcius=document.getElementById('cel');
+     let Farenheit=document.getElementById('far');
+     celcius.addEventListener('input',function(){
+        Farenheit.value=((this.value * 9/5) + 32). toFixed(3) ; 
+     })
+     Farenheit.addEventListener('input',function(){
+        celcius.value=((this.value - 32) *5/9).toFixed(3)  ;
+     }
+     );
+
+
+    </script>
+</body>
+</html>
